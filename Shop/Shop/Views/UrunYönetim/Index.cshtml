@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Shop.Models.Urun>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_AdminLayout";
+}
+
+<h1>Ürün Yönetim</h1>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<p>
+    <a asp-action="Create">Yeni Ürün Ekle</a>
+</p>
+
+@*<form asp-controller="AdminProduct" asp-action="Index" method="get">
+    <p> Kategori :
+        <select asp-for="CategoryName" asp-items="Model.Categories">
+             <option value="">Tümü</option>
+        </select>
+
+        Ürün Adı : <input type="text" asp-for="SearchText" />
+        <input type="submit" value="Ara" />
+    </p>
+</form>*@
+
+
+
+<table class="table table-ba">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.İşlemciModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GPUModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RamKapasitesi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EkranBoyutu)
+            </th>
+          @*  <th>
+                @Html.DisplayNameFor(model => model.İşletimSistemi)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kategori)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marka)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var urun in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => urun.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => urun.Fiyat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => urun.Aciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => urun.İşlemciModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => urun.GPUModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => urun.RamKapasitesi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => urun.EkranBoyutu)
+            </td>
+           @* <td>
+                @Html.DisplayFor(modelItem => urun.İşletimSistemi)
+            </td>*@
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Foto)*@
+                    <img src="/img/@urun.Foto" alt="@urun. Ad adlı kitabın kapak göreseli" height="120" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => urun.Kategori.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => urun.Marka.Ad)
+            </td>
+            <td>
+                 <a asp-action="Edit" asp-route-id="@urun.Id"><i class="fa-solid fa-pen"></i></a> <br>
+                 <a asp-action="Details" asp-route-id="@urun.Id"><i class="fa-solid fa-circle-info"></i></a><br>
+                 <a asp-action="Delete" asp-route-id="@urun.Id"><i class="fa-solid fa-trash"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

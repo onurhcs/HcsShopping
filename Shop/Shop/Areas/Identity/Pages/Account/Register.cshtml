@@ -1,0 +1,41 @@
+﻿@page
+@model RegisterModel
+
+
+
+<div class="row" style="margin-left:38%;">
+    <div class="col-md-4 offset-md-4">
+        <br />
+        <h2>Üyelik Kaydı</h2>
+        <br />
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class= "row mb-3">
+                <label asp-for="Input.Email">Email</label><br />
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <br />
+            <div class= "row mb-3">
+                <label asp-for="Input.Password">Şifre</label><br />
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="row mb-3">
+                <label asp-for="Input.ConfirmPassword">Tekrar Şifre</label><br />
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <br />
+            <br />
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Kayıt Ol</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

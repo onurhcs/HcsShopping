@@ -1,0 +1,125 @@
+﻿@model Shop.Models.Siparis
+@inject Shop.Data.ApplicationDbContext context
+@inject Microsoft​.AspNetCore​.Http.IHttpContextAccessor HttpContextAccessor
+@{
+	var session = HttpContextAccessor.HttpContext.Session;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+			   <form asp-action="AddressAndPayment" method="post">
+				<div class="col-md-7">
+					<!-- Billing Details -->
+					<div class="billing-details">
+						<div class="section-title">
+							<h3 class="title">SİPARİŞ</h3>
+						</div>
+						
+					<div class="form-group">
+					    <p>Ad Soyad : </p>
+                        <input asp-for="AdSoyad" class="input"  type="text" placeholder="">
+						<span asp-validation-for="AdSoyad" class="text-danger" requared ></span>
+					</div>
+					<div class="form-group">
+						<p>Adres : </p>
+						<input asp-for="TeslimatAdresi" class="input"  type="text" placeholder="" />
+						<span asp-validation-for="TeslimatAdresi" class="text-danger" requared></span>
+					</div>
+					<div class="form-group">
+						<p>Sehir : </p>
+						<input asp-for="Sehir" class="input"  type="text" placeholder="" />
+						<span asp-validation-for="Sehir" class="text-danger" requared></span>
+					</div>
+					<div class="form-group">
+						<p>Telefon Numarası : </p>
+						<input asp-for="TelefonNumarasi" class="input"   type="text" placeholder=" Örn : 532 532 32 32" />
+						<span asp-validation-for="TelefonNumarasi" class="text-danger" requared></span>
+					</div>
+					<div class="form-group">
+						<p>Email : </p>
+						<input asp-for="EPostaAdresi" class="input"  type="text" placeholder="" />
+						<span asp-validation-for="EPostaAdresi" class="text-danger" requared></span>
+					</div>
+					<div class="form-group">
+					    <p>Promosyon Kodu : </p>
+						<input asp-for="KuponKodu" class="input"  type="text" placeholder="" />
+						<span asp-validation-for="KuponKodu" class="text-danger" requared></span>
+					</div>
+					<br />
+					<br />
+							<button type="submit" class="primary-btn order-submit">Ödemeyi Tamamla</button> 
+					</div>
+					
+				</div>
+				
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+
+				
+
+
+				<!-- Order Details -->
+				<div class="col-md-5 order-details">
+					
+					<div class="order-summary">
+						
+					</div>
+					<div class="form-floating mb-3">
+                    
+					</div>
+					<div class="form-group">				
+						<p>Kart Numarası :</p>
+							<input asp-for="KartNumarası" class="input"  type="text" placeholder="**** **** **** ****" />
+							<span asp-validation-for="KartNumarası" class="text-danger" requared></span>
+					</div>
+
+					<div class="form-group">
+						<p>Kart Üzerindeki İsim :</p>
+							<input asp-for="KartUzerindekiAd" class="input"  type="text" placeholder="Kart Sahibinin Adı Ve Soyadı" />
+							<span asp-validation-for="KartUzerindekiAd" class="text-danger" requared></span>
+					</div>
+					<div class="form-group">
+						<p>Son Kullanma Tarihi :</p>
+							<input asp-for="SonKullanmaTarihi" class="input"  type="text" placeholder="Ay / Yıl" />
+							<span asp-validation-for="SonKullanmaTarihi" class="text-danger" requared></span>
+					</div>
+					<div class="form-group">
+						<p>Güvenlik Kodu :</p>
+							<input asp-for="GüvenlikKodu" class="input"  type="text" placeholder="CVC / CVV" />
+							<span asp-validation-for="GüvenlikKodu" class="text-danger" requared></span>
+					</div>
+					<br />
+					<div id="cart-total">
+						<font size="5" text-align="right" color="Black">
+							Toplam:
+							@{
+								string toplam = @context.SepetElemanlari.Where(e => e.SepetAd == @HttpContextAccessor.HttpContext.Session.GetString("SepetAdi")).Sum(e => e.SatisFiyati * e.Adet).ToString();
+							}
+							@toplam.Substring(0, toplam.Length - 2) ₺
+						</font>
+					</div>
+				</div>
+				</form>
+				<!-- /Order Details -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+
+
+
+</body>
+</html>
+
+

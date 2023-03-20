@@ -1,0 +1,88 @@
+﻿@model Shop.Models.Urun
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_AdminLayout";
+}
+
+<h1>Edit</h1>
+
+<h4>Urun</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fiyat" class="control-label"></label>
+                <input asp-for="Fiyat" class="form-control" />
+                <span asp-validation-for="Fiyat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Aciklama" class="control-label"></label>
+                <input asp-for="Aciklama" class="form-control" />
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="İşlemciModel" class="control-label"></label>
+                <input asp-for="İşlemciModel" class="form-control" />
+                <span asp-validation-for="İşlemciModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GPUModel" class="control-label"></label>
+                <input asp-for="GPUModel" class="form-control" />
+                <span asp-validation-for="GPUModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RamKapasitesi" class="control-label"></label>
+                <input asp-for="RamKapasitesi" class="form-control" />
+                <span asp-validation-for="RamKapasitesi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EkranBoyutu" class="control-label"></label>
+                <input asp-for="EkranBoyutu" class="form-control" />
+                <span asp-validation-for="EkranBoyutu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="İşletimSistemi" class="control-label"></label>
+                <input asp-for="İşletimSistemi" class="form-control" />
+                <span asp-validation-for="İşletimSistemi" class="text-danger"></span>
+            </div>
+           @* <div class="form-group">
+                <label asp-for="Foto" class="control-label"></label>
+                <input asp-for="Foto" class="form-control" required="required" type="file" accept="image/*" />
+                <span asp-validation-for="Foto" class="text-danger"></span>
+            </div>*@
+
+           
+
+            <div class="form-group">
+                <label asp-for="KategoriId" class="control-label"></label>
+                <select asp-for="KategoriId" class="form-control" asp-items="ViewBag.KategoriId"></select>
+                <span asp-validation-for="KategoriId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MarkaId" class="control-label"></label>
+                <select asp-for="MarkaId" class="form-control" asp-items="ViewBag.MarkaId"></select>
+                <span asp-validation-for="MarkaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

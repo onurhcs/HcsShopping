@@ -1,0 +1,161 @@
+﻿@using Shop.Models;
+
+
+@model List<Urun>
+
+<!-- BREADCRUMB -->
+<div id="breadcrumb" class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="breadcrumb-tree">
+					<li><a href="/Home/Index">Ana Sayfa</a></li>
+					<li><a href="/Urun/Index">Laptop</a></li>
+					
+				</ul>
+			</div>
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /BREADCRUMB -->
+<!-- SECTION -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- ASIDE -->
+			<div id="aside" class="col-md-3">
+				<!-- aside Widget -->
+				<div class="aside">
+
+					@*<h3 class="aside-title">KATEGORİ</h3>
+					<div class="checkbox-filter">
+							<div class="input-checkbox">
+								<input type="checkbox" id="category-1">
+								<label for="category-1">
+									<span></span>
+										Laptop
+								</label>
+							</div>
+					</div>*@
+				</div>
+				<!-- /aside Widget -->
+				<!-- aside Widget -->
+				@*<div class="aside">
+					<h3 class="aside-title">FİYAT</h3>
+					<div class="price-filter">
+						<div id="price-slider"></div>
+						<div class="input-number price-min">
+							<input id="price-min" type="number">
+							<span class="qty-up">+</span>
+							<span class="qty-down">-</span>
+						</div>
+						<span>-</span>
+						<div class="input-number price-max">
+							<input id="price-max" type="number">
+							<span class="qty-up">+</span>
+							<span class="qty-down">-</span>
+						</div>
+					</div>
+				</div>*@
+				<!-- /aside Widget -->
+				<!-- aside Widget -->
+				@*<div class="aside">
+					<h3 class="aside-title">Marka</h3>
+					<div class="checkbox-filter">
+							<div class="input-checkbox">
+								<input type="checkbox" id="brand-1">
+								<label for="brand-1">
+								<span></span>
+								MSİ
+								</label>
+							</div>
+							<div class="input-checkbox">
+								<input type="checkbox" id="brand-3">
+								<label for="brand-3">
+								<span></span>
+								LENOVO
+								</label>
+							</div>
+						<div class="input-checkbox">
+							<input type="checkbox" id="brand-4">
+							<label for="brand-4">
+								<span></span>
+								GIGABYTE
+							</label>
+						</div>
+					</div>
+				</div>*@
+			</div>
+			<div id="store" class="col-md-9">
+				@*<div class="store-filter clearfix">
+					<div class="store-sort">
+					</div>
+					<div class="input-checkbox">
+						<input type="checkbox" id="brand-2">
+						<label for="brand-2">
+						</label>
+					</div>
+					<div class="input-checkbox">
+						<input type="checkbox" id="brand-2">
+						<label for="brand-2">
+						</label>
+					</div>
+					<ul class="store-grid">
+						<li class="active"><i class="fa fa-th"></i></li>
+						<li><a href="#"><i class="fa fa-th-list"></i></a></li>
+					</ul>
+				</div>*@
+				<!-- /store top filter col-xs-6 -->
+				<!-- store products -->
+				@foreach (var item in Model)
+						{
+				<div class="clearfix visible-sm visible-xs"></div>
+				
+				<div class="col-md-4 ">	
+					
+					<div class="product">
+						
+							<div class="product-img">
+							<img src="/img/@item.Foto" alt="">
+							<div class="product-label">
+								
+							</div>
+						</div>
+						<div class="product-body">
+							<h3 class="product-name"><a href="/Urun/UrunDetay/ @item.Id">@item.Ad</a></h3>
+							<h4 class="product-price">@item.Fiyat ₺ </h4>
+							<div class="product-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+							</div>
+							<div class="product-btns">
+								<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+								<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+								<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+							</div>
+						</div>
+						<div class="add-to-cart">
+								<a href="/Sepet/SepeteUrunEkle/@item.Id"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Sepete Ekle</button></a>
+						</div>
+						
+					</div>
+					
+				</div>
+				}
+			</div>
+			<!-- /STORE -->
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /SECTION -->

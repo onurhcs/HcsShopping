@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Shop.Models.İletisim>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AdSoyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefonNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Konu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MesajMetni)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdSoyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Konu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MesajMetni)
+            </td>
+     
+             <td>
+                 <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen"></i></a> <br>
+                <a asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a><br>
+                <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
+             </td>
+        </tr>
+}
+    </tbody>
+</table>

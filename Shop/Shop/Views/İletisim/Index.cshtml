@@ -1,0 +1,153 @@
+﻿@model Shop.Models.İletisim
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+@*<form asp-action="Index">
+                <div class="row">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="col-lg-6 col-md-6">
+
+                        <input type="text" name="NameSurName" placeholder="Ad , SoyAd:*" required>
+                        <span asp-validation-for="AdSoyad" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <input type="text" name="Mail" placeholder="Email:*" required>
+                        <span asp-validation-for="EMail" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-lg-12 text-center">
+                        <textarea placeholder="Lütfen Mesajınızı Yazın:*" name="Message" required></textarea>
+                        <span asp-validation-for="MesajMetni" class="text-danger"></span>
+                   <button type="submit" class="site-btn">GÖNDER</button>
+          </div>
+     </div>
+</form>*@
+
+@*
+<section class="contact py-lg-4 py-md-3 py-sm-3 py-3">
+    <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Bize Ulaşın</h3>
+        <div class="contact-list-grid">
+            <form asp-action="Index">
+                <div class=" agile-wls-contact-mid">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group contact-forms">
+
+                        <input type="text" name="AdSoyad" placeholder="Ad , SoyAd:" required>
+                        <span asp-validation-for="AdSoyad" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group contact-forms">
+                        <input type="text" name="Email" placeholder="Email:" required>
+                        <span asp-validation-for="EMail" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group contact-forms">
+                        <input type="text" name="Konu" placeholder="Konu:" required>
+                        <span asp-validation-for="Konu" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group contact-forms">
+                        <textarea placeholder="Lütfen Mesajınızı Yazın:" name="MesajMetni" required></textarea>
+                        <span asp-validation-for="MesajMetni" class="text-danger"></span>
+                        <button type="submit" class="btn btn-block sent-butnn">Gönder</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>*@
+
+	<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+                  
+					<div class="col-md-7">
+                      <form asp-action="Index">
+						<!-- Billing Details -->
+						<div class="billing-details">
+							<div class="section-title">
+								<h3 class="title">Billing address</h3>
+							</div>
+							<div class="form-group">
+                            <input class="input" type="text" name="AdSoyad" placeholder="AdSoyad">
+								<span asp-validation-for="AdSoyad" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+                            <input class="input" type="text" name="TelefonNo" placeholder="Telefon No">
+								<span asp-validation-for="TelefonNo" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+                            <input class="input" type="email" name="EMail" placeholder="Email">
+								<span asp-validation-for="EMail" class="text-danger"></span>
+							</div>
+
+							<div class="form-group">
+                            <input class="input" type="text" name="Konu" placeholder="Konu">
+						    <span asp-validation-for="Konu" class="text-danger"></span>
+							</div>
+
+                        <div class="order-notes">
+                            <textarea class="input" placeholder="Lütfen Mesajınızı Yazın:" name="MesajMetni" required></textarea>
+                            <span asp-validation-for="MesajMetni" class="text-danger"></span>
+                            <button type="submit" class="btn btn-block sent-butnn">Gönder</button>
+                          </div>
+                        
+                          </div>
+                      </form>
+					</div>
+                    <br />
+            <div class="col-md-5 contact-left pl-lg-5 mt-md-0 mt-5">
+                <h3 class="font-weight-bold mb-md-5 mb-4">İletişim detayları</h3>
+                <div class="cont-details">
+                    <div class="d-flex contact-grid">
+                        <div class="cont-left text-center mr-3">
+                            <br />
+                            <br />
+                        </div>
+                        <div class="cont-right">
+                            <h6>Şirket Adresi</h6>
+                            <p>İstanbul / Kartal</p>
+                        </div>
+                    </div>
+                    <div class="d-flex contact-grid mt-4 pt-lg-2">
+                        <div class="cont-left text-center mr-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="cont-right">
+                            <h6>Bizi Arayın</h6>
+                            <p><a href="tel:+90 543 578 53 34">+90 543 578 53 34</a></p>
+                        </div>
+                    </div>
+                    <div class="d-flex contact-grid mt-4 pt-lg-2">
+                        <div class="cont-left text-center mr-3">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div class="cont-right">
+                            <h6>Bize e-posta gönderin</h6>
+                            <p><a href="mailto:onrhaci90@gmail.com" class="mail">onrhaci90@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                  
+				</div>
+			</div>
+		</div>
+    </div>
+
+<div class="map-iframe">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12060.792276508093!2d29.2330782!3d40.9114028!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3eec0b4900439b07!2sTwinstar%20Yakac%C4%B1k!5e0!3m2!1str!2str!4v1672173175142!5m2!1str!2str"
+            width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
+</div>
+

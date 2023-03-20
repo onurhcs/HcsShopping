@@ -1,0 +1,129 @@
+﻿@using Shop.Models;
+
+@model List<Urun>
+
+<div id="breadcrumb" class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-md-push-2">
+				<div id="product-main-img">
+					@foreach (var item in Model)
+					{
+						<div class="product-preview">
+							<img src="/img/@item.Foto" alt="">
+						</div>
+						<div class="product-preview">
+							<img src="/img/@item.Foto" alt="">
+						</div>
+					}
+
+				</div>
+			</div>
+			<div class="col-md-2  col-md-pull-5">
+				<div id="product-imgs">
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="product-details">
+					@foreach (var item in Model)
+					{
+						<h2 class="product-name">@item.Ad</h2>
+						<div>
+							<div class="product-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-o"></i>
+							</div>
+							<a class="review-link" href="#">10 Review(s) | Add your review</a>
+						</div>
+						<div>
+							<h3 class="product-price">@item.Fiyat ₺ <del class="product-old-price"></del></h3>
+
+						</div>
+						<p>@item.Aciklama</p>
+						<div class="add-to-cart">
+
+							<a href="/Sepet/SepeteUrunEkle/@item.Id"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Sepete Ekle</button>    </a>
+						</div>
+					}
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div id="product-tab">
+					<ul class="tab-nav">
+						<li class="active"><a data-toggle="tab" href="#tab1">Ürün Bilgileri</a></li>
+					</ul>
+					<div class="tab-content">
+						@foreach (var item in Model)
+						{
+							<div id="tab1" class="tab-pane fade in active">
+								<div class="row">
+									<div class="col-md-12">
+										<p>İşlemci Modeli : @item.İşlemciModel</p>
+										<p>Ekran Kartı : @item.GPUModel</p>
+										<p>Ram Kapasitesi : @item.RamKapasitesi</p>
+										<p>Ekran Boyutu : @item.EkranBoyutu</p>
+										<p>İştetim Sistemi : @item.İşletimSistemi</p>
+									</div>
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title text-center">
+						<h3 class="title">Benzer Ürünler</h3>
+					</div>
+				</div>
+				@foreach (Urun benzerUrunler in ((List<Urun>)ViewData["BenzerUrunler"]))
+				{
+				<div class="col-md-3 col-xs-6">
+					<div class="product">
+						<div class="product-img">
+							<img src="/img/@benzerUrunler.Foto" alt="">
+							<div class="product-label">
+							</div>
+						</div>
+						<div class="product-body">
+							<h3 class="product-name"><a href="#">@benzerUrunler.Ad</a></h3>
+							<h4 class="product-price">@benzerUrunler.Fiyat ₺ <del class="product-old-price"></del></h4>
+							<div class="product-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+							</div>
+							<div class="product-btns">
+								<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+								<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+								<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				}
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /Section -->
+</div>

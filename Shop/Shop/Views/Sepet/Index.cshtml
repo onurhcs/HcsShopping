@@ -1,0 +1,136 @@
+﻿@model Shop.Models.SepetViewModel
+
+@{
+    //Layout = "_SiteLayout"; // TODO: gerekirse _Layout kullan
+    ViewBag.Title = "Sepetim";
+    ViewBag.SepetAdet = Model.SepettekiElemanAdedi;
+}
+
+<script type="text/javascript">
+
+    function is1() {
+        // Get the id from the link
+        var recordToDelete = $(this).attr("data-id");
+        if (recordToDelete != '') {
+            // Perform the ajax post
+            $.post("/Sepet/SepettenUrunSil", { "id": recordToDelete },
+                function (data) {
+
+
+
+                    // Successful requests get here
+                    // Update the page elements
+                    if (data.ilgiliUrunAdedi == 0) {
+                        $('#row-' + data.silinenUrunId).fadeOut('slow');
+                    } else {
+                        $('#item-count-' + data.silinenUrunId).text(data.ilgiliUrunAdedi);
+                    }
+                    $('#cart-total').text(data.sepetTutari);
+                    $('#cart-count').text(data.sepettekiElemanAdedi);
+                    $('#update-message').text(data.mesaj);
+                    $('#cartInfo').text('Cart: (' + data.sepettekiElemanAdedi + ')');
+                });
+        }
+    }
+
+    $(function () {
+        // Document.ready -> link up remove event handler
+        $(".RemoveLink").click(is1);
+    });
+</script>
+
+
+
+
+<div class="container px-3 my-5 clearfix">
+     
+    <!-- Shopping cart table -->
+    <div class="card">
+        <div class="card-header">
+            
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered m-0">           
+                    <thead>
+                        <tr>
+                            <!-- Set columns width -->
+                            <th class="text-center py-3 px-4" style="min-width: 100px;">Ürün Detayı</th>
+                            <th class="text-right py-3 px-4" style="width: 100px;">Fiyat</th>
+                            <th class="text-center py-3 px-4" style="width: 100px;">Adet</th>
+                            <th class="text-right py-3 px-4" style="width: 100px;">Toplam</th>
+                            <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#" class="shop-tooltip float-none text-light" title="" data-original-title="Clear cart"><i class="ino ion-md-trash"></i></a></th>
+                           
+                         
+                        </tr>
+                        <br />
+                    </thead>                  
+                    <tbody>
+
+                        @foreach (SepetElemani item in Model.SepetElemanlari)
+                        {
+                        <tr>
+                            <td class="p-4">
+                                <div class="media align-items-center">
+                                        <a href="/Urun/UrunDetay/@item.UrunId">  <img src="/img/@item.Urunler.Foto" style="width: 150px;height: 150px" class="d-block ui-w-40 ui-bordered mr-4" alt="">@item.Urunler.Ad</a>
+                                        <p size="3"> Ürün Hakkında : @item.Urunler.Aciklama</p>
+                                    
+                                </div>
+                            </td>
+                                <td class="text-right font-weight-semibold align-middle p-4">@item.Urunler.Fiyat</td>
+                            <td class="align-middle p-4"><input type="text" class="form-control text-center" value="@item.Adet" disabled=""></td>
+                            
+                                <td class="text-right font-weight-semibold align-middle p-4"> @Model.SepetTutari</td>
+                        </tr>
+
+                        }
+                     
+                    </tbody>
+                    
+                </table>
+                    
+            </div>
+            <!-- / Shopping cart table -->
+
+            <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
+              
+                <div class="d-flex">
+                   
+                    <div class="text-right mt-4">
+                        <div>
+                            <a class="primary-btn order-submit" asp-area="" asp-controller="Sepet" asp-action="SepetiBosalt">Sepeti Boşalt</a>
+                        </div>
+                        <label class="text-muted font-weight-normal m-0">Toplam Tutar</label>
+                        
+                        <div class="text-large"><strong>@Model.SepetTutari ₺</strong></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="float-right">
+               
+                <p class="button">
+                    <a href="/Home/Index" class="cta-btn"> <button type="button" class="primary-btn order-submit">Alışverişe Geri Dön</button></a>
+                    
+                    @if (Model.SepetTutari== 0)
+                    {
+                        
+                    }
+                    else
+                    {
+                        <a class="primary-btn order-submit" asp-area="" asp-controller="Odeme" asp-action="AddressAndPayment">ÖDE</a>
+                    }
+                     
+                </p>
+            </div>
+           <br />
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+

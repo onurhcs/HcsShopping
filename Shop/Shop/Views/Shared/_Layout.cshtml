@@ -1,0 +1,207 @@
+﻿@inject Shop.Data.ApplicationDbContext context
+
+@inject Microsoft​.AspNetCore​.Http.IHttpContextAccessor HttpContextAccessor
+@{
+	var session = HttpContextAccessor.HttpContext.Session;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HCSSHOPİNG</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="~/Web/css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="~/Web/css/slick.css" />
+		<link type="text/css" rel="stylesheet" href="~/Web/css/slick-theme.css" />
+		<link type="text/css" rel="stylesheet" href="~/Web/css/nouislider.min.css" />
+		<link rel="stylesheet" href="~/Web/css/font-awesome.min.css">
+		<link type="text/css" rel="stylesheet" href="~/Web/css/style.css" />
+		
+
+	</head>
+
+	<style>
+			a.whatsapp
+			{
+				position: fixed;
+				right: 20px;
+				bottom: 20px;
+				width: 50px;
+				height:50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #25d366;
+				border-radius: 50%;
+				text-decoration: none;
+			}
+
+			a.whatsapp i 
+			{
+				color: #fff;
+				font-size: 24px;
+			}
+	</style>
+	
+	<body>
+
+		<a href="https://wa.me/905435535353?text=Merhaba,%20Web%20sitenizden%20ulasiyorum." target="_blank" class="whatsapp">
+		<i class="fa-brands fa-whatsapp"></i>
+		</a>
+			<header>
+				<div id="top-header">
+					<div class="container">
+						<ul class="header-links pull-left">
+							<li><a href="#"><i class="fa fa-phone"></i> 0543 578 53 34</a></li>
+							<li><a href="#"><i class="fa fa-envelope-o"></i> onrhaci90@gmail.com </a></li>
+						</ul>
+						<ul class="header-links pull-right">
+							<partial name="_LoginPartial" />
+						</ul>
+					</div>
+				</div>
+
+				<div id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 pd-5">
+								<div class="header-logo">
+									<a href="#" class="logo">
+										<p></p>
+										<p></p>
+										<p></p>
+										<p> <font size="5" style="background-color:#15161D">HCS SHOPPİNG</font> </p>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="header-search">
+							
+								</div>
+							</div>
+							<div class="col-md-3 clearfix">
+								<div class="header-ctn">
+									<div class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+											<i class="fa fa-shopping-cart"></i>
+											<a href="/Sepet/Index" class="cart for-buy"><i class="icon icon-clipboard"></i><span id="cartInfo">Sepetim</span></a>
+											<div id="cart-total" >
+												<font color="white">Toplam:
+													@{
+														string toplam = @context.SepetElemanlari.Where(e => e.SepetAd == @HttpContextAccessor.HttpContext.Session.GetString("SepetAdi")).Sum(e => e.SatisFiyati * e.Adet).ToString();
+													 }
+													@toplam.Substring(0, toplam.Length - 2) ₺
+												</font>
+											</div>
+										</a>
+									</div>
+									<div class="menu-toggle">
+										<a href="#">
+											<i class="fa fa-bars"></i>
+											<span>Menu</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<nav id="navigation">
+				<div class="container">
+					<div id="responsive-nav">
+						<ul class="main-nav nav navbar-nav">
+							<li><a class="" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+				
+							<li><a class="" asp-area="" asp-controller="Home" asp-action="Hakkımızda">Hakkımızda</a></li>
+							<li><a class="" asp-area="" asp-controller="İletisim" asp-action="Index">İletişim</a></li>
+							<li><a class="" asp-area="" asp-controller="AdminAnaSayfa" asp-action="Index">Admin</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+		@RenderBody()
+
+			<footer id="footer">
+				<div class="section">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 col-xs-6">
+								<div class="footer">
+									<h3 class="footer-title">Hakkımızda</h3>
+									<ul class="footer-links">
+										<li><a href="/İletisim/Index"><i class="fa fa-map-marker"></i>Kartal/İstanbul</a></li>
+										<li><a href="/İletisim/Index"><i class="fa fa-phone"></i>543 578 53 34</a></li>
+										<li><a href="/İletisim/Index"><i class="fa fa-envelope-o"></i>onrhaci90@gmail.com</a></li>
+
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-3 col-xs-6">
+								<div class="footer">
+							
+										<h3 class="footer-title">Markalar</h3>
+									@foreach (var item in context.Markalar)
+									{
+										<ul class="footer-links">
+											<li><a href="#">@item.Ad</a></li>
+							
+										</ul>
+									}
+							
+								</div>
+							</div>
+
+							<div class="clearfix visible-xs"></div>
+							<div class="col-md-3 col-xs-6">
+								<div class="footer">
+											<h3 class="footer-title">Kategori</h3>
+									@foreach (var item in context.Kategoriler)
+									{
+										<ul class="footer-links">
+											<li><a href="/Urun/Index/?kategoriId=@item.KategoriId">@item.Ad</a></li>
+							
+										</ul>
+									}
+								</div>
+							</div>
+
+							<div class="col-md-3 col-xs-6">
+								<div class="footer">
+									<h3 class="footer-title">Hizmet</h3>
+									<ul class="footer-links">
+										<li><a class="" asp-area="" asp-controller="Sepet" asp-action="Index">Sepeti Görüntüle</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="bottom-footer" class="section">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<span class="copyright">
+									Copyright &copy;<script>document.write(new Date().getFullYear());</script> HCS
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		<script src="~/Web/js/jquery.min.js"></script>
+		<script src="~/Web/js/bootstrap.min.js"></script>
+		<script src="~/Web/js/slick.min.js"></script>
+		<script src="~/Web/js/nouislider.min.js"></script>
+		<script src="~/Web/js/jquery.zoom.min.js"></script>
+		<script src="~/Web/js/main.js"></script>
+		@await RenderSectionAsync("Scripts", required: false)
+	</body>
+</html>

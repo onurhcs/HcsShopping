@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Shop.Models.Kategori>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_AdminLayout";
+}
+
+<h1>Kategoriler</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.KategoriId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KategoriId)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.foto)*@
+                    <img src="/img/@item.foto" alt="@item.foto Ad adlı kitabın kapak göreseli" height="120" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aciklama)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.KategoriId"><i class="fa-solid fa-pen"></i></a> <br>
+                    <a asp-action="Details" asp-route-id="@item.KategoriId"><i class="fa-solid fa-circle-info"></i></a><br>
+                    <a asp-action="Delete" asp-route-id="@item.KategoriId"><i class="fa-solid fa-trash"></i></a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿@model int
+@{
+    ViewBag.Title = "Checkout Complete";
+}
+
+
+<center>
+<div class="container">
+
+         <i class="fa-solid fa-square-check"></i>
+        <h2> <font size="5" color="Green">Siparişiniz Başarıyla Oluşturuldu!</font></h2>
+        <p><font size="5"> Siparis Numaranız : @Model</font></p>
+
+    
+                 <p>Ödeme Metodunuz kabul edildi ve siparişiniz onaylandı</p>
+            <p>En Kısa Sürede Sipariş detaylarızı içeren Bir Eposta Alacaksınız</p>
+    <p>Siparişinizin Durumunu Takip Etmek İçin <big> Sipariş Takibi </big> Sayfasını Ziyaret Edebilirsiniz</p>
+   <br />
+   <br />
+
+    <p>Sitemizden Sipariş Vermek İçin Üye Olmak Zorunlu Değildir.</p>
+    <p>Fakat Siparişlerinizi Yönetmek Ve Sonraki Siparişlerinizde Kolaylık Sağlaması Açısından Üye Olmanız Öneririz.</p>
+    <p><small>ÜYE OLMAK İÇİN BURAYA TIKLAYIN</small></p>
+
+<p> 
+    Alışverişe devam etmek için :
+    @Html.ActionLink("Ürünlerimiz","Index", "Home")
+    </p> 
+</div>
+</center>

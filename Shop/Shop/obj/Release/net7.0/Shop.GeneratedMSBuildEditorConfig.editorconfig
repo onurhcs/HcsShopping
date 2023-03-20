@@ -1,0 +1,201 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Shop
+build_property.RootNamespace = Shop
+build_property.ProjectDir = C:\Users\onrha\OneDrive\Desktop\BİTİRME PROJESİ\Shop\Shop\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\onrha\OneDrive\Desktop\BİTİRME PROJESİ\Shop\Shop
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/AdminAnaSayfa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BbmFTYXlmYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Home/Hakkımızda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIYWtrxLFtxLF6ZGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/KategoriYonetim/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlZb25ldGltXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/KategoriYonetim/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlZb25ldGltXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/KategoriYonetim/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlZb25ldGltXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/KategoriYonetim/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlZb25ldGltXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/KategoriYonetim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlZb25ldGltXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/MarkaYönetim/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFya2FZw7ZuZXRpbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/MarkaYönetim/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFya2FZw7ZuZXRpbVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/MarkaYönetim/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFya2FZw7ZuZXRpbVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/MarkaYönetim/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFya2FZw7ZuZXRpbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/MarkaYönetim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFya2FZw7ZuZXRpbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Odeme/AddressAndPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2RlbWVcQWRkcmVzc0FuZFBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Odeme/Complete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2RlbWVcQ29tcGxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Sepet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VwZXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/SiparisYonetim/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lwYXJpc1lvbmV0aW1cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/SiparisYonetim/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lwYXJpc1lvbmV0aW1cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/SiparisYonetim/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lwYXJpc1lvbmV0aW1cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/SiparisYonetim/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lwYXJpc1lvbmV0aW1cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/SiparisYonetim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lwYXJpc1lvbmV0aW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/UrunYönetim/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blnDtm5ldGltXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/UrunYönetim/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blnDtm5ldGltXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/UrunYönetim/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blnDtm5ldGltXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/UrunYönetim/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blnDtm5ldGltXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/UrunYönetim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blnDtm5ldGltXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Urun/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Urun/UrunDetay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxVcnVuRGV0YXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/İletisimYonetim/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcxLBsZXRpc2ltWW9uZXRpbVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/İletisimYonetim/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcxLBsZXRpc2ltWW9uZXRpbVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/İletisimYonetim/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcxLBsZXRpc2ltWW9uZXRpbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/İletisimYonetim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcxLBsZXRpc2ltWW9uZXRpbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/İletisim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcxLBsZXRpc2ltXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onrha/OneDrive/Desktop/BİTİRME PROJESİ/Shop/Shop/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-bv1m2l6qkp
